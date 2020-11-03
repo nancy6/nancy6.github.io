@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <title>3d旋转</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .article {
+            margin: 200px auto;
+            perspective: 1100px;
+        }
+
+        .circle{
+            transform-style: preserve-3d;
+            position: relative;
+            margin: 200px auto 0px;
+            width: 200px;
+            height: 200px;
+            animation: circle 4s linear infinite;
+            transform: rotateX(0deg);
+        }
+        @keyframes circle {
+           
+			0% {
+				left:0px; 
+				transform: rotateX(-20deg) rotateY(0deg);
+				}
+				
+			50% {
+				left:300px; 
+				transform: rotateX(-20deg) rotateY(180deg);
+				}
+				
+			100% {
+				left:0px; 
+				transform: rotateX(-20deg) rotateY(0deg);
+				}
+        }
+
+        .circle>div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+        }
+       .circle>div:first-child {
+           
+            border-top: 0;
+            border-bottom: 0;
+            border: 2px rgb(139, 195, 74) solid;
+            background: rgba(139, 195, 74, 0.4);
+           
+        }
+
+       .circle>div:nth-child(2) {
+            border: 2px rgb(139, 195, 74) solid;
+            background: rgba(139, 195, 74, 0.4);
+            border-top: none;
+            border-bottom: none;
+            transform: translateX(0px) rotateY(45deg);
+        }
+
+       .circle>div:nth-child(3) {
+            border: 2px rgb(139, 195, 74) solid;
+            background: rgba(139, 195, 74, 0.4);
+            border-top: none;
+            border-bottom: none;
+            transform: translateX(0px) rotateY(90deg);
+        }
+
+       .circle>div:nth-child(4) {
+            border: 2px rgb(139, 195, 74) solid;
+            background: rgba(139, 195, 74, 0.4);
+            border-top: none;
+            border-bottom: none;
+            transform: translateX(0px) rotateY(135deg);
+        }
+        .circle>div:nth-child(5) {
+            border-radius: 50%;
+            border: 2px rgb(139, 195, 74) solid;
+            background: rgba(139, 195, 74, 0.4);
+            border-top: none;
+            border-bottom: none;
+            transform: translateY(-100px) rotateX(90deg);
+        }
+        .circle>div:nth-child(6) {
+            border-radius: 50%;
+            border: 2px rgb(139, 195, 74) solid;
+            background: rgba(139, 195, 74, 0.4);
+            border-top: none;
+            border-bottom: none;
+            transform: translateY(100px) rotateX(90deg);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- 圆柱 -->
+        <article class="article">
+            <div class="circle">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </article>
+
+
+    </div>
+</body>
+
+</html>
